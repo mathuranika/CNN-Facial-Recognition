@@ -1,9 +1,10 @@
-streamlit>=1.34.0
-mediapipe==0.10.21
-torch>=2.1.0
-torchvision>=0.16.0
+streamlit
+mediapipe
+torch
+torchvision
 opencv-python
 Pillow
 facenet-pytorch
 numpy
 scikit-learn
+matplotlib
