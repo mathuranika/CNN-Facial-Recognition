@@ -25,7 +25,7 @@ model = load_model()
 transform = transforms.Compose([
     transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
     transforms.ToTensor(),
-    transforms.Normalize([0.5], [0.5])
+    transforms.Normalize([0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
 ])
 
 # Face Prediction
@@ -99,6 +99,6 @@ if uploaded_video:
     cap.release()
     out.release()
 
-    st.success("✅ Done! Download your labeled video below.")
+    st.success("Done! Download your labeled video below.")
     with open(output_path, "rb") as f:
         st.download_button("📥 Download Labeled Video", f, file_name="labeled_output.mp4")
